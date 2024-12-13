@@ -1,0 +1,11 @@
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/bin/Debug/net9.0/ClassLibrary1_tms.deps.json
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/bin/Debug/net9.0/ClassLibrary1_tms.dll
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/bin/Debug/net9.0/ClassLibrary1_tms.pdb
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.AssemblyInfoInputs.cache
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.AssemblyInfo.cs
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.csproj.CoreCompileInputs.cache
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.dll
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/refint/ClassLibrary1_tms.dll
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ClassLibrary1_tms.pdb
+/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/Debug/net9.0/ref/ClassLibrary1_tms.dll

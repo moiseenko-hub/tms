@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ConsoleApp1_tms/ConsoleApp1_tms.csproj": {}
+  },
+  "projects": {
+    "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/ClassLibrary1_tms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/ClassLibrary1_tms.csproj",
+        "projectName": "ClassLibrary1_tms",
+        "projectPath": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/ClassLibrary1_tms.csproj",
+        "packagesPath": "/Users/andrejmoiseenko/.nuget/packages/",
+        "outputPath": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrejmoiseenko/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/andrejmoiseenko/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ConsoleApp1_tms/ConsoleApp1_tms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ConsoleApp1_tms/ConsoleApp1_tms.csproj",
+        "projectName": "ConsoleApp1_tms",
+        "projectPath": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ConsoleApp1_tms/ConsoleApp1_tms.csproj",
+        "packagesPath": "/Users/andrejmoiseenko/.nuget/packages/",
+        "outputPath": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ConsoleApp1_tms/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrejmoiseenko/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/ClassLibrary1_tms.csproj": {
+                "projectPath": "/Users/andrejmoiseenko/RiderProjects/ConsoleApp1_tms/ClassLibrary1_tms/ClassLibrary1_tms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/andrejmoiseenko/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
