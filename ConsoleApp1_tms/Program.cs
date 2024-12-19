@@ -1,4 +1,5 @@
-﻿using ClassLibrary1_tms;
+﻿using Calculator;
+using ClassLibrary1_tms;
 
 namespace ConsoleApp1_tms;
 
@@ -6,10 +7,25 @@ class Program
 {
     static void Main(string[] args)
     {
-        Class1 class1 = new Class1();
-        //class1.Foo();
-        //Console.WriteLine(class1.GetRandomVerses(new List<string>() { "hello", "class", "hi", "one", "two" }));
-        //class1.TestQuest();
-        class1.StoreSimulator();
+        IStrategy strategy;
+        StrategyContext strategyContext = new StrategyContext();
+        Console.WriteLine("Choose the first number : ");
+        var a = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Choose the second number : ");
+        var b = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Choose operation");
+        var op = Console.ReadLine();
+
+        strategy = op switch
+        {
+            "+" => new StrategyAdd(),
+            "-" => new StrategySub(),
+            "*" => new StrategyMult(),
+            "/" => new StrategyDiv(),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+        
+        strategyContext.SetStrategy(strategy);
+        Console.WriteLine(strategyContext.ExecuteStrategy(a, b));
     }
 }
