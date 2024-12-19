@@ -60,4 +60,14 @@ public class Lesson3
     {
         Console.WriteLine(num % 2 == 0 ? "Even" : "Odd");
     }
+
+    public void GetTemperatureDescription(int t)
+    {
+        if(t > -5)
+            Console.WriteLine("Warm");
+        else if (-5 >= t & t > -20)
+            Console.WriteLine("Fine");
+        else if(-20 >= t)
+            Console.WriteLine("Cold");
+    }
 }
