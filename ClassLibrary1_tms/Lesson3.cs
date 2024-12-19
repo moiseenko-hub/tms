@@ -55,4 +55,9 @@ public class Lesson3
         Console.WriteLine(result);
         
     }
+
+    public void IsEven(int num)
+    {
+        Console.WriteLine(num % 2 == 0 ? "Even" : "Odd");
+    }
 }
