@@ -18,7 +18,7 @@ public class Lesson3
             10 => "Autumn",
             11 => "Autumn",
             12 => "Winter",
-            _=>"Error"
+            _ => "Error"
         };
         Console.WriteLine(result);
     }
@@ -69,5 +69,19 @@ public class Lesson3
             Console.WriteLine("Fine");
         else if(-20 >= t)
             Console.WriteLine("Cold");
+    }
+
+    public void ShowColorOfRainbow(int n)
+    {
+        Console.WriteLine(n switch
+        {
+            1 => "Red",
+            2 => "Orange",
+            3 => "Yellow",
+            4 => "Green",
+            5 => "Blue",
+            6 => "Violet",
+            _ => "Error"
+        });
     }
 }
