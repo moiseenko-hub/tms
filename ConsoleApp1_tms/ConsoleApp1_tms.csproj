@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Calculator\Calculator.csproj" />
       <ProjectReference Include="..\ClassLibrary1_tms\ClassLibrary1_tms.csproj" />
     </ItemGroup>
 
