@@ -7,7 +7,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        IStrategy strategy;
+        IArithmeticStrategy? arithmeticStrategy;
+        IUnaryOperationStrategy? unaryOperationStrategy;
         StrategyContext strategyContext = new StrategyContext();
         Console.WriteLine("Choose the first number : ");
         var a = Convert.ToDouble(Console.ReadLine());
@@ -16,16 +17,31 @@ class Program
         Console.WriteLine("Choose operation");
         var op = Console.ReadLine();
 
-        strategy = op switch
+        arithmeticStrategy = op switch
         {
-            "+" => new StrategyAdd(),
-            "-" => new StrategySub(),
-            "*" => new StrategyMult(),
-            "/" => new StrategyDiv(),
-            _ => throw new ArgumentOutOfRangeException()
+            "+" => new ArithmeticStrategyAdd(),
+            "-" => new ArithmeticStrategySub(),
+            "*" => new ArithmeticStrategyMult(),
+            "/" => new ArithmeticStrategyDiv(),
+            "%" => new ArithmeticStrategyPercent(),
+            _ => null
         };
-        
-        strategyContext.SetStrategy(strategy);
-        Console.WriteLine(strategyContext.ExecuteStrategy(a, b));
+
+        unaryOperationStrategy = op switch
+        {
+            "^" => new StrategySquareRoot(),
+            _ => null
+        };
+
+        if (arithmeticStrategy is not null)
+        {
+            strategyContext.SetStrategy(arithmeticStrategy);
+            Console.WriteLine(strategyContext.ExecuteStrategy(a, b));
+        } else if (unaryOperationStrategy is not null)
+        {
+            strategyContext.SetStrategy(unaryOperationStrategy);
+            Console.WriteLine(strategyContext.ExecuteStrategy(a));
+        }
+
     }
 }

@@ -2,15 +2,26 @@ namespace Calculator;
 
 public class StrategyContext
 {
-    private IStrategy _strategy;
+    private IArithmeticStrategy? _arithmeticStrategy;
+    private IUnaryOperationStrategy _unaryOperationStrategy;
 
-    public void SetStrategy(IStrategy strategy)
+    public void SetStrategy(IArithmeticStrategy? arithmeticStrategy)
     {
-        this._strategy = strategy;
+        this._arithmeticStrategy = arithmeticStrategy;
+    }
+
+    public void SetStrategy(IUnaryOperationStrategy unaryOperationStrategy)
+    {
+        this._unaryOperationStrategy = unaryOperationStrategy;
     }
 
     public double ExecuteStrategy(double a, double b)
     {
-        return this._strategy.Execute(a, b);
+        return this._arithmeticStrategy.Execute(a, b);
+    }
+
+    public double ExecuteStrategy(double a)
+    {
+        return this._unaryOperationStrategy.Execute(a);
     }
 }

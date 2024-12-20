@@ -1,6 +1,6 @@
 namespace Calculator;
 
-public interface IStrategy
+public interface IArithmeticStrategy
 {
     public double Execute(double a, double b);
 }

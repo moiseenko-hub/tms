@@ -1,9 +1,10 @@
 namespace Calculator;
 
-public class StrategySub : IStrategy
+public class ArithmeticStrategyAdd : IArithmeticStrategy
 {
     public double Execute(double a, double b)
     {
-        return a / b;
+        return a + b;
     }
+    
 }

@@ -1,6 +1,6 @@
 namespace Calculator;
 
-public class StrategyMult : IStrategy
+public class ArithmeticStrategyMult : IArithmeticStrategy
 {
     public double Execute(double a, double b)
     {
