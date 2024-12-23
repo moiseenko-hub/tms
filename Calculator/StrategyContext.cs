@@ -3,9 +3,9 @@ namespace Calculator;
 public class StrategyContext
 {
     private IArithmeticStrategy? _arithmeticStrategy;
-    private IUnaryOperationStrategy? _unaryOperationStrategy;
+    private IUnaryOperationStrategy _unaryOperationStrategy;
 
-    public void SetStrategy(IArithmeticStrategy arithmeticStrategy)
+    public void SetStrategy(IArithmeticStrategy? arithmeticStrategy)
     {
         this._arithmeticStrategy = arithmeticStrategy;
     }
