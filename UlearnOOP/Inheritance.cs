@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace UlearnOOP;
 
 public class Inheritance
@@ -45,5 +47,28 @@ public class Inheritance
         {
             resultArray.SetValue(expandingArray.GetValue(i),resultArrayCounter);
         }
+    }
+
+    public static IComparable MiddleOfThree(IComparable a, IComparable b, IComparable c)
+    {
+        if (a.CompareTo(b) > 0 && a.CompareTo(c) < 0 || a.CompareTo(c) > 0 && a.CompareTo(b) < 0)
+            return a;
+        if (b.CompareTo(a) > 0 && b.CompareTo(c) < 0 || b.CompareTo(c) > 0 && b.CompareTo(a) < 0)
+            return b;
+        if (c.CompareTo(a) > 0 && c.CompareTo(b) < 0 || c.CompareTo(b) > 0 && c.CompareTo(a) < 0)
+            return c;
+        return null;
+    }
+
+    public static object Min(Array comparables)
+    {
+        var min = (IComparable)comparables.GetValue(0);
+        foreach (var item in comparables)
+        {
+            if (min.CompareTo(item) > 0)
+                min = (IComparable)item;
+        }
+
+        return min;
     }
 }
