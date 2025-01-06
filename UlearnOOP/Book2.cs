@@ -1,13 +1,20 @@
 using System.Collections;
+using System.Reflection;
 
 namespace UlearnOOP;
 
-public class Book(string title, int theme) : IComparable, IComparer
+public class Book2 : IComparable, IComparer
 { 
-    public string Title = title; 
-    public int Theme = theme;
+    public string Title { get; set; }
+    public int Theme { get; set; }
 
-    public Book() //  A constructor declared in 'class' with parameter list must have 'this' constructor initializer
+    public Book2(string title, int theme)
+    {
+        Title = title;
+        Theme = theme;
+    }
+
+    public Book2() 
     {
         
     }
