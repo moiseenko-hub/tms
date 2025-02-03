@@ -34,10 +34,18 @@ public class Http
         Console.WriteLine($"{jsonResponse}\n");
     }
 
-    static async Task PathAsync(HttpClient httpClient, int id, User user)
+    static async Task PutAsync(HttpClient httpClient, int id, User user)
     {
         using HttpResponseMessage response =
             await httpClient.PutAsJsonAsync($"posts/{id}", user);
+        var jsonResponse = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"{jsonResponse}\n");
+    }
+    
+    static async Task PathAsync(HttpClient httpClient, int id, User user)
+    {
+        using HttpResponseMessage response =
+            await httpClient.PatchAsJsonAsync($"posts/{id}", user);
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"{jsonResponse}\n");
     }
