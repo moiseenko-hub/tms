@@ -10,46 +10,50 @@ public class Http
         BaseAddress = new Uri("https://jsonplaceholder.typicode.com"),
         
     };
-    static async Task Main(string[] args)
+    static async Task GetByIdAsync(HttpClient httpClient, int id)
     {
-        await GetAsync(_httpClient);
-    }
-
-    static async Task GetByIdAsync(HttpClient httpClient)
-    {
-        using HttpResponseMessage response = await httpClient.GetAsync("todos/1");
+        using HttpResponseMessage response = 
+            await httpClient.GetAsync($"todos/{id}");
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine(jsonResponse);
     }
     
     static async Task GetAsync(HttpClient httpClient)
     {
-        using HttpResponseMessage response = await httpClient.GetAsync("todos");
+        using HttpResponseMessage response = 
+            await httpClient.GetAsync("todos");
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine(jsonResponse);
     }
 
-    static async Task PostAsync(HttpClient httpClient)
+    static async Task PostAsync(HttpClient httpClient, User user)
     {
         using HttpResponseMessage response =
-            await httpClient.PostAsJsonAsync("posts", new User(false,"Andrey",11));
-        
+            await httpClient.PostAsJsonAsync("posts", user);
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"{jsonResponse}\n");
     }
 
-    static async Task PathAsync(HttpClient httpClient)
+    static async Task PutAsync(HttpClient httpClient, int id, User user)
     {
         using HttpResponseMessage response =
-            await httpClient.PutAsJsonAsync("posts/1", new User(true, "Kirill", 22));
+            await httpClient.PutAsJsonAsync($"posts/{id}", user);
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"{jsonResponse}\n");
     }
     
-    static async Task DeleteAsync(HttpClient httpClient)
+    static async Task PathAsync(HttpClient httpClient, int id, User user)
     {
         using HttpResponseMessage response =
-            await httpClient.DeleteAsync("posts/1");
+            await httpClient.PatchAsJsonAsync($"posts/{id}", user);
+        var jsonResponse = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"{jsonResponse}\n");
+    }
+    
+    static async Task DeleteAsync(HttpClient httpClient, int id)
+    {
+        using HttpResponseMessage response =
+            await httpClient.DeleteAsync($"posts/{id}");
         var jsonResponse = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"{jsonResponse}\n");
     }
